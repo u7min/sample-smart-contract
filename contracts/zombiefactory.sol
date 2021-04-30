@@ -1,14 +1,16 @@
-pragma solidity ^0.4.19;
+pragma solidity ^0.4.19; //solidity 버전 표시
 
 import "./ownable.sol";
 import "./safemath.sol";
 
+//contract 는 클래스와 비슷한 개념
 contract ZombieFactory is Ownable {
 
   using SafeMath for uint256;
 
   event NewZombie(uint zombieId, string name, uint dna);
 
+  //아래와 같은 변수를 상태변수라 하고, 블록체인에 기록된다. (데이터베이스에 기록)
   uint dnaDigits = 16;
   uint dnaModulus = 10 ** dnaDigits;
   uint cooldownTime = 1 days;
@@ -22,6 +24,7 @@ contract ZombieFactory is Ownable {
     uint16 lossCount;
   }
 
+  //이것은 동적배열로, 원소를 계속추가할 수 있는 데이터베이스와 같다.
   Zombie[] public zombies;
 
   mapping (uint => address) public zombieToOwner;
