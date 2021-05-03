@@ -22,7 +22,7 @@ contract ZombieFactory is Ownable {
     uint32 level;
     uint32 readyTime;
     uint16 winCount;
-    uint16 lossCount;
+    uint16 lossCount; // 구조체 안에서는 unit의 크기를 지정하는 것이 가스를 효율적으로 사용하는 방식이다.
   }
 
   // 이것은 동적배열로, 원소를 계속추가할 수 있는 데이터베이스와 같다.
