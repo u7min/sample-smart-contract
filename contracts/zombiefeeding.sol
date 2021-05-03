@@ -2,6 +2,7 @@ pragma solidity ^0.4.19;
 
 import "./zombiefactory.sol";
 
+// 이런식으로 외부 컨트랙트의 정보를 얻어올 수도 있다.
 contract KittyInterface {
   function getKitty(uint256 _id) external view returns (
     bool isGestating,
