@@ -33,6 +33,7 @@ contract ZombieHelper is ZombieFeeding {
   }
 
   function getZombiesByOwner(address _owner) external view returns(uint[]) {
+    // memory는 임시적으로 저장되는 변수(블록에 쓰여지지 않음)
     uint[] memory result = new uint[](ownerZombieCount[_owner]);
     uint counter = 0;
     for (uint i = 0; i < zombies.length; i++) {
