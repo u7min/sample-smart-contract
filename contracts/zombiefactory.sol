@@ -26,6 +26,7 @@ contract ZombieFactory is Ownable {
   }
 
   // 이것은 동적배열로, 원소를 계속추가할 수 있는 데이터베이스와 같다.
+  // 함수외부에 있으므로 묵시적으로 storage로 선언되어 블록에 쓰여진다.
   Zombie[] public zombies;
 
   // Key-Value 저장소, Address는 유저의 Account 주소를 담을 수 있다.
