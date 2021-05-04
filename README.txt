@@ -1,4 +1,4 @@
-REMIX EXAMPLE PROJECT
+# Getting Started with Sample Smart Contract
 
 Remix example project is present when Remix loads very first time or there are no files existing in the File Explorer. 
 It contains 3 directories:
